@@ -1,0 +1,5 @@
+Hello World!
+My name is Bekzat
+This is Practice 6
+Python is easy!
+I am learning file handling
