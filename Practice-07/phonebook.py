@@ -1,10 +1,8 @@
-
 import csv
 from pathlib import Path
 from connect import connect
 
 
-# 1. ADD CONTACT
 def add_contact():
     name = input("Enter name: ").strip()
     phone = input("Enter phone: ").strip()
@@ -37,7 +35,6 @@ def add_contact():
         conn.close()
 
 
-# 2. SHOW ALL CONTACTS
 def show_contacts():
     conn = connect()
     cur = conn.cursor()
@@ -60,7 +57,6 @@ def show_contacts():
         conn.close()
 
 
-# 3. UPDATE CONTACT
 def update_contact():
     name = input("Enter username: ")
 
@@ -124,7 +120,6 @@ def update_contact():
         conn.close()
 
 
-# 4. DELETE CONTACT
 def delete_contact():
     value = input("Enter username or phone: ")
 
@@ -156,7 +151,6 @@ def delete_contact():
         conn.close()
 
 
-# 5. SEARCH CONTACT
 def search_contact():
     print("1. Search by name")
     print("2. Search by phone prefix")
@@ -209,7 +203,6 @@ def search_contact():
         conn.close()
 
 
-# 6. IMPORT FROM CSV
 def import_csv():
     file_path = Path(__file__).with_name("contacts.csv")
 
@@ -252,7 +245,6 @@ def import_csv():
         conn.close()
 
 
-# MAIN MENU
 while True:
     print("\n--- PHONEBOOK ---")
     print("1. Add contact")
