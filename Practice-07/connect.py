@@ -1,11 +1,5 @@
 import psycopg2
-import os
+from config import DB_CONFIG
 
 def connect():
-    return psycopg2.connect(
-        host="localhost",
-        database="phonebook_db",
-        user="postgres",
-        password=os.environ["DB_PASSWORD"],
-        port=5432
-    )
+    return psycopg2.connect(**DB_CONFIG)
